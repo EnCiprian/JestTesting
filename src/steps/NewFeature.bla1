@@ -1,0 +1,135 @@
+// import { defineFeature, loadFeature } from 'jest-cucumber'
+
+// const feature = loadFeature('./src/features/NewFeature.feature');
+// // var request = require('request');
+// // var axios = require('axios');
+// // var rp = require('request-promise');
+
+// defineFeature(feature, test => {
+
+//   test('Get the employees details', ({ given, when, then }) => {
+ 
+//     given('that i have the employee api', () => {
+
+//     });
+
+//     when(/^I do a get on the (.*) endpoint$/, async endpointName => {
+//       // makeCall(processResponse);
+
+//       await axios
+//       .get("https://restcountries.eu/rest/v2/all")
+//       .then ( response => {
+//         if ( response.data.status != 200 ) {
+//           throw "404";
+//         }
+//         console.timeEnd(url);
+//       })
+//       .catch(error => {
+//         // console.log("api error:" + error);
+//         throw error;
+//       });
+//     });
+
+//     then('the employees list is correct', () => {
+//       //   expect(rocket.isInSpace).toBe(true);
+//       }); 
+   
+//     });
+
+//   });
+
+//     // function makeCall( callback ) {
+
+//     //     axios.get("https://restcountries.eu/rest/v2/all").then (function () { callback (); });
+
+//     //     // axios.get('https://restcountries.eu/rest/v2/all', function (response) {
+//     //     //     if (!response || response.error) {
+//     //     //         var finalresponse = response.error;
+//     //     //     } else {
+//     //     //         finalresponse = 'Post ID: ' + response.id;
+//     //     //     }
+//     //     //     callback(finalresponse);
+//     //     //   });
+//     // }
+    
+    
+//     // function processResponse( response ) {
+//     //     expect(response.response.status).toBe(200);
+//     // }
+
+
+
+//       //   await axios.get("https://restcountries.eu/rest/v2/all").then ( response => {
+//       //     if (response.data.status != 200) {
+//       //       throw "404";
+//       //     }
+          
+//       //     console.timeEnd(url);
+//       //   })
+//       //   .catch(error => {
+//       //     console.log("api error:" + error);
+//       //     throw error;
+//       //   });
+//       // });
+         
+//         //expect(x.response.status).toBe(200);
+
+//         //  processResponse( apiResponse );
+
+//         //http://fakerestapi.azurewebsites.net/posts/1
+        
+//         // axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+//         // (async() => {
+//         //     let apiRes = null;
+//         //     try {
+//         //       apiRes = await axios.get('https://restcountries.eu/rest/v2/all');
+
+              
+//         //       expect(apiRes.response.statusCode).toBe(300);
+              
+//         //       expect(apiRes.response)
+//         //     } catch (err) {
+//         //       apiRes = err.response;
+//         //     }
+            
+
+//         //   })();
+
+        
+//         // (await axios.get("https://restcountries.eu/rest/v2/all")).then((callResp) => {
+//         //     console.log(JSON.parse(callResp.response.data).id);
+//         //     expect(JSON.parse(callResp.response.data).id).toBe('1');
+//         // }).catch((error) => {
+//         //     if (error.response) {
+//         //         console.log(error.response.statusCode);
+//         //     }
+//         //     else {
+//         //         console.log("sadada");
+//         //     }
+//         // });
+
+
+//         // var apiResponse = await axios.get("https://swapi.co/api/people/1");
+
+
+//         // expect(apiResponse.response.status).toBe(200);
+
+
+//         // expect(JSON.parse(callResp.response.data).id).toBe('1');
+        
+//         // request('http://www.google.com', function (error, response, body) {
+//         //     console.log('error:', error); // Print the error if one occurred
+//         //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+//         //     console.log('body:', body); // Print the HTML for the Google homepage.
+//         //   });
+        
+//         // rp('http://www.google.com')
+//         // .then(function (htmlString) {
+//         //     console.log(htmlString);
+//         //     // Process html...
+//         // })
+//         // .catch(function (err) {
+//         //     console.log(err);
+//         //     // Crawling failed...
+//         // });
