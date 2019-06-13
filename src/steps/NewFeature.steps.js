@@ -1,24 +1,21 @@
-import { defineFeature, loadFeature } from 'jest-cucumber'
-import axios from 'axios';
+import { defineFeature, loadFeature } from 'jest-cucumber';
 
 const feature = loadFeature('./src/features/NewFeature.feature');
+var restCall = require("./do-rest-calls.js");
+var initializer = require("./initialize-world.js");
+
+var world = require("./world.js")
 
 defineFeature(feature, test => {
   test('Get the employees details', ({ given, when, then }) => {
-    let apiResponse;
-    given('that i have the employee api', () => {
+    initializer.givenIInitializeTheWorld(given)
 
-    });
-
-    when(/^I do a get on the (.*) endpoint$/, async endName => {
-      // apiReponse = request.(app).get("");
-      apiResponse = await axios.get("https://restcountries.eu/rest/v2/all");
-      // console.log(apiResponse.data);
-    });
+    restCall.makeARestCall(when)
 
     then('the employees list is correct', () => {
       // console.log(apiResponse.data);
-      expect(apiResponse.status).toBe(200);
+      expect(world.apiResponse.status).toBe(200);
+      expect(world.initializationMessage).toBe("I have initialized world");
     });
   }); 
 });
